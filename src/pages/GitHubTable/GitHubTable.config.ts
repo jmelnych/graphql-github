@@ -1,7 +1,7 @@
 import { Column } from 'react-table';
 
 export type GitColumnTypes = {
-    repoName: string;
+    repoName: JSX.Element;
     stars: number;
     forks: number;
   };

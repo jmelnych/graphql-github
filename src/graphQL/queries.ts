@@ -12,6 +12,7 @@ const reposQuery = (quantity: number) => gql`
             nodes {
               name
               description
+              url
               forkCount
               stargazers {
                 totalCount
