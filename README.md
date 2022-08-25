@@ -4,11 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Prerequisites
 Please create .env .env.development files with the following variables:
-`
+```
 REACT_APP_GITHUB_LOGIN=${github_login}
 REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN=${github_access_token}
 REACT_APP_GITHUB_URL=https://api.github.com/graphql
-`
+```
 
 where github_login and github_access_token are your values.
 
