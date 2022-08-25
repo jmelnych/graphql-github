@@ -31,9 +31,6 @@ function DataTable<Data extends object>({
     prepareRow
   } = useTable({ columns, data }, useSortBy);
 
-  console.log('headerGroups', headerGroups);
-  
-
   return (
     <Table {...getTableProps()}>
       <Thead>
@@ -67,11 +64,11 @@ function DataTable<Data extends object>({
           prepareRow(row);
           return (
             <Tr {...row.getRowProps()} key={`row_${idx}`}>
-              {row.cells.map((cell) => (
+              {row.cells.map((cell, cellIdx) => (
                 <Td
                   {...cell.getCellProps()}
                   isNumeric={cell.column.isNumeric}
-                  key={cell.value}
+                  key={`row_${idx}_cell${cellIdx}`}
                 >
                   {cell.render('Cell')}
                 </Td>
